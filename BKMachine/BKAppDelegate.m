@@ -7,6 +7,8 @@
 //
 
 #import "BKAppDelegate.h"
+#import "Defines.h"
+#import "BKMem0010.h"
 
 @implementation BKAppDelegate
 
@@ -17,7 +19,14 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+// Test //////////////
+    BKMem0010 * mem = [[BKMem0010 alloc] init];
+
+    [mem release];
     // Insert code here to initialize your application
 }
-
+- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
+{
+    return YES;
+}
 @end
